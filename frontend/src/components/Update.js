@@ -11,7 +11,7 @@ const Update = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/order/${id}`)
+      .get(`http://10.133.201.123:5000/order/${id}`)
       .then((res) => {
         SetOrder(res.data);
         setTitle(res.data.title);
@@ -29,11 +29,11 @@ const Update = () => {
     e.preventDefault();
     const order = { title, description, qty };
 
-    axios.post(`http://localhost:5000/order/${id}`, order).then(() => {
+    axios.post(`http://10.133.201.123:5000/order/${id}`, order).then(() => {
       console.log("Order updated");
       history.push("/");
     });
-    // fetch(`http://localhost:8000/orders/${id}`, {
+    // fetch(`http://10.133.201.123:8000/orders/${id}`, {
     //   method: "PUT",
     //   headers: { "Content-Type": "application/json" },
     //   body: JSON.stringify(order),

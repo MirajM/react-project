@@ -10,7 +10,7 @@ const OrderDetail = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/order/${id}`)
+      .get(`http://10.133.201.123:5000/order/${id}`)
       .then((res) => {
         SetOrder(res.data);
       })
@@ -21,7 +21,7 @@ const OrderDetail = () => {
 
   const handleDelete = () => {
     axios
-      .delete(`http://localhost:5000/order/${id}`)
+      .delete(`http://10.133.201.123:5000/order/${id}`)
       .then(() => {
         console.log("Order deleted");
         history.push("/");
@@ -30,7 +30,7 @@ const OrderDetail = () => {
         console.log(err);
       });
 
-    // fetch(`http://localhost:5000/order/${id}`, {
+    // fetch(`http://10.133.201.123:5000/order/${id}`, {
     //   method: "DELETE",
     // }).then(() => {
     //   history.push("/");
