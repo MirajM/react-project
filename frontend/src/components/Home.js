@@ -7,7 +7,7 @@ const Home = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/order")
+      .get("http://10.133.201.123:5000/order")
       .then((res) => {
         setOrders(res.data);
       })

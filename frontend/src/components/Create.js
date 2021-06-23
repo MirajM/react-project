@@ -12,12 +12,12 @@ const Create = () => {
     e.preventDefault();
     const order = { title, description, qty };
 
-    axios.post("http://localhost:5000/order", order).then(() => {
+    axios.post("http://10.133.201.123:5000/order", order).then(() => {
       console.log("Order added");
       history.push("/");
     });
 
-    // fetch("http://localhost:5000/order", {
+    // fetch("http://10.133.201.123:5000/order", {
     //   method: "POST",
     //   headers: { "Content-Type": "application/json" },
     //   body: JSON.stringify(order),
